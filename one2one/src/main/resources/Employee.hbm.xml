@@ -11,6 +11,11 @@
         <property name="userName" type="java.lang.String">
             <column name="USERNAME" />
         </property>
-        <one-to-one name="personalDetails" class="com.hb.beans.PersonalDetails"></one-to-one>
+        
+        <property name="deptNo" type="int">
+            <column name="DEPTNO" />
+        </property>
+        
+        <one-to-one name="personalDetails" class="com.hb.beans.PersonalDetails" cascade="all"></one-to-one>
     </class>
 </hibernate-mapping>
